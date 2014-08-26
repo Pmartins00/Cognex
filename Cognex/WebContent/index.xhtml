@@ -1,17 +1,32 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
-
+	
+	
+	
 	<ui:composition class="row" template="/WEB-INF/templates/_template2.xhtml">
 		<ui:define name="titulo">Consultas - Cognex</ui:define>
 	
 		<ui:define name="corpo">
-			<h:form>
+			<h:form class="form-consulta">
+				
+				<h:panelGrid columns="5">
+					<p:selectOneButton>
+						<f:selectItem itemLabel="*****" itemValue="0"/>
+						<f:selectItem itemLabel="01" itemValue="1"/>
+						<f:selectItem itemLabel="02" itemValue="2"/>
+						<f:selectItem itemLabel="03" itemValue="3"/>
+					</p:selectOneButton>
+					<p:inputText/>
+					<p:inputText/>
+					<p:calendar mask="99/99/9999" pattern="dd/MM/yyyy" locale="pt"/>
+					<p:calendar mask="99:99:99" pattern="HH:mm:ss"/>
+				</h:panelGrid>
+				
 				<p:dataTable paginator="true" paginatorPosition="bottom">
 				
 				<p:column headerText="Célula">

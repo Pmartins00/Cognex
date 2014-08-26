@@ -1,7 +1,18 @@
+* {
+	margin:0;
+	padding:0;
+	list-style:none;
+	vertical-align:baseline;
+}
+
 #header {
 	background: #525252;
 	min-height: 100px;
 	border-bottom: 4px solid;
+	font-family: serif;
+	font-size: 40px;
+	color: #FFF;
+	padding: 10px;
 }
 
 #conteudo {
@@ -12,6 +23,10 @@
 	background: #525252;
 	min-height: 100px;
 	border-top: 4px solid;
+	color: #FFF;
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
 }
 
 #formLogin, #form-conf {
@@ -37,4 +52,13 @@
 
 #form-conf button {
 	float: right;
+}
+
+.form-consulta {
+	margin-top: 20px;
+}
+
+.form-consulta input {
+	width: 220px;
+	margin-left: 2px;
 }

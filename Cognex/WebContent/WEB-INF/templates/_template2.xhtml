@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
@@ -10,48 +9,52 @@
 <h:head>
 	
 	<title><ui:insert name="titulo"/></title>
-	<h:outputScript name="jsf.js" library="javax.faces" target="head"/>
-	<h:outputScript name="bootstrap.js" library="dist/js"/>
+	
 	<h:outputStylesheet name="bootstrap.css" library="dist/css"/>
 	<h:outputStylesheet name="app.css" library="css"/>
+	
+	<h:outputText value="&lt;!--[if lt IE 9]&gt;" escape="false" />
+		<h:outputScript name="html5shiv.js" library="dist/js"/>
+		<h:outputScript name="respond.min.js" library="dist/js"/>
+	<h:outputText value="&lt;![endif]--&gt;" escape="false" />
+
+	
+	<h:outputScript name="bootstrap.js" library="dist/js"/>
+	<h:outputScript name="locale.js" library="js"/>
+	<h:outputScript name="jsf.js" library="javax.faces" target="head"/>
 	
 </h:head>
 
 <h:body>
 	
 	<div id="header">
-		<div class="row">
-			<div class="container">
-				<div class="col-md-12">
-				
-				</div>
+		<div class="container">
+			<div class="col-md-12">
+				Cognex
 			</div>
 		</div>
 	</div>
 	
 	<div id="conteudo">
-		<div class="row">
-			<div class="container">
-				<div class="col-md-12">
-					<h:form>
-						<p:menubar>
-							<p:menuitem value="Consultas" outcome="index.xhtml" action="index.xhtml"/>
-							<p:menuitem value="Configurações" outcome="configuracao.xhtml" action="configuracao.xhtml"/>
-							<p:menuitem value="Sair" action="#{loginBean.logout}"/>
-						</p:menubar>
-					</h:form>
-					<ui:insert name="corpo"/>
-				</div>
+		<div class="container">
+			<div class="col-md-12">
+				<h:form>
+					<p:menubar>
+						<p:menuitem value="Consultas" outcome="index.xhtml" action="index.xhtml"/>
+						<p:menuitem value="Configurações" outcome="configuracao.xhtml" action="configuracao.xhtml"/>
+						<p:menuitem value="Sair" action="#{loginBean.logout}"/>
+					</p:menubar>
+				</h:form>
+				<ui:insert name="corpo"/>
 			</div>
 		</div>
 	</div>
 	
 	<div id="footer">
-		<div class="row">
-			<div class="container">
-				<div class="col-md-12">
-				
-				</div>
+		<div class="container">
+			<div class="col-md-12">
+				<br />
+				Weg Cestari © 2014
 			</div>
 		</div>
 	</div>
